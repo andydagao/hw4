@@ -2,20 +2,26 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.0.36">
+<meta name="generator" content="quarto-1.3.353">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Insert your name here">
+<meta name="author" content="Andy Gao">
 
 <title>Homework 4</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-span.underline{text-decoration: underline;}
-div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
@@ -42,43 +48,13 @@ pre.numberSource code > span > a:first-child::before
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
     padding: 0 4px; width: 4em;
-    color: #aaaaaa;
   }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
 div.sourceCode
   {   }
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 
@@ -93,6 +69,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <link href="hm4_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="hm4_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
@@ -112,23 +89,27 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <div>
       <div class="quarto-title-meta-heading">Author</div>
       <div class="quarto-title-meta-contents">
-               <p><span style="background-color: yellow;">Insert your name here</span> </p>
+               <p><span style="background-color: yellow;">Andy Gao</span> </p>
             </div>
     </div>
       
+    
       
     </div>
     
   
   </header><div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
 <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-  <nav id="TOC" role="doc-toc">
+  <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#question-1" id="toc-question-1" class="nav-link active" data-scroll-target="#question-1">Question 1</a></li>
+  <li><a href="#section" id="toc-section" class="nav-link active" data-scroll-target="#section"><br><br><br><br></a></li>
+  <li><a href="#question-1" id="toc-question-1" class="nav-link" data-scroll-target="#question-1">Question 1</a></li>
   <li><a href="#question-2" id="toc-question-2" class="nav-link" data-scroll-target="#question-2">Question 2</a></li>
+  <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1"></a></li>
   <li><a href="#question-3" id="toc-question-3" class="nav-link" data-scroll-target="#question-3">Question 3</a></li>
+  <li><a href="#and-making-sure-that-the-accuracy-is-100-while-the-errors-are-0." id="toc-and-making-sure-that-the-accuracy-is-100-while-the-errors-are-0." class="nav-link" data-scroll-target="#and-making-sure-that-the-accuracy-is-100-while-the-errors-are-0.">and making sure that the accuracy is <span class="math inline">\(100\%\)</span> while the errors are <span class="math inline">\(0\%\)</span>.</a></li>
   </ul>
 </nav>
 </div>
@@ -138,16 +119,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 
 <hr>
-<div class="callout-important callout callout-style-default callout-captioned">
+<div class="callout callout-style-default callout-important callout-titled" style="font-size: 0.8em;">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
+<div class="callout-title-container flex-fill">
 Important
 </div>
 </div>
-<div class="callout-body-container callout-body" style="font-size: 0.8em;">
+<div class="callout-body-container callout-body">
 <p>Please read the instructions carefully before submitting your assignment.</p>
 <ol type="1">
 <li>This assignment requires you to only upload a <code>PDF</code> file on Canvas</li>
@@ -158,7 +139,8 @@ Important
 </div>
 </div>
 <p>We will be using the following libraries:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>packages <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>packages <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">"dplyr"</span>, </span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">"readr"</span>, </span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">"tidyr"</span>, </span>
@@ -172,18 +154,155 @@ Important
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  <span class="st">"broom"</span></span>
 <span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>)</span>
 <span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="co"># renv::install(packages)</span></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="fu">sapply</span>(packages, require, <span class="at">character.only=</span>T)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><br><br><br><br></p>
-<hr>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>renv<span class="sc">::</span><span class="fu">install</span>(packages)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>The following package(s) will be installed:
+- broom    [1.0.5]
+- car      [3.1-2]
+- caret    [6.0-94]
+- corrplot [0.92]
+- dplyr    [1.1.4]
+- nnet     [7.3-19]
+- purrr    [1.0.2]
+- readr    [2.1.5]
+- stringr  [1.5.1]
+- tidyr    [1.3.1]
+- torch    [0.12.0]
+These packages will be installed into "~/hw4/renv/library/R-4.3/x86_64-w64-mingw32".
+
+# Installing packages --------------------------------------------------------
+- Installing dplyr ...                          OK [linked from cache]
+- Installing readr ...                          OK [linked from cache]
+- Installing purrr ...                          OK [linked from cache]
+- Installing stringr ...                        OK [linked from cache]
+- Installing tidyr ...                          OK [linked from cache]
+- Installing corrplot ...                       OK [linked from cache]
+- Installing nnet ...                           OK [linked from cache]
+- Installing broom ...                          OK [linked from cache]
+- Installing car ...                            OK [linked from cache]
+- Installing caret ...                          OK [linked from cache]
+- Installing torch ...                          OK [linked from cache]
+Successfully installed 11 packages in 95 milliseconds.</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sapply</span>(packages, require, <span class="at">character.only=</span>T)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Loading required package: dplyr</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>
+Attaching package: 'dplyr'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following objects are masked from 'package:stats':
+
+    filter, lag</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following objects are masked from 'package:base':
+
+    intersect, setdiff, setequal, union</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Loading required package: readr</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Loading required package: tidyr</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Loading required package: purrr</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Loading required package: stringr</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'stringr' was built under R version 4.3.2</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Loading required package: corrplot</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'corrplot' was built under R version 4.3.2</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>corrplot 0.92 loaded</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Loading required package: car</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'car' was built under R version 4.3.2</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Loading required package: carData</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'carData' was built under R version 4.3.2</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>
+Attaching package: 'car'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following object is masked from 'package:purrr':
+
+    some</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following object is masked from 'package:dplyr':
+
+    recode</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Loading required package: caret</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'caret' was built under R version 4.3.2</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Loading required package: ggplot2</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Loading required package: lattice</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>
+Attaching package: 'caret'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following object is masked from 'package:purrr':
+
+    lift</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Loading required package: torch</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'torch' was built under R version 4.3.2</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Loading required package: nnet</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Loading required package: broom</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   dplyr    readr    tidyr    purrr  stringr corrplot      car    caret 
+    TRUE     TRUE     TRUE     TRUE     TRUE     TRUE     TRUE     TRUE 
+   torch     nnet    broom 
+    TRUE     TRUE     TRUE </code></pre>
+</div>
+</div>
+<section id="section" class="level2">
+<h2 class="anchored" data-anchor-id="section"><br><br><br><br></h2>
+</section>
 <section id="question-1" class="level2">
 <h2 class="anchored" data-anchor-id="question-1">Question 1</h2>
-<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
+<div class="callout-title-container flex-fill">
 30 points
 </div>
 </div>
@@ -193,29 +312,50 @@ Important
 </div>
 <section id="points-1" class="level6">
 <h6 class="anchored" data-anchor-id="points-1">1.1 (5 points)</h6>
-<p>Consider <span class="math inline">\(g(x, y)\)</span> given by</p>
-<p><span class="math display">\[
+<p>Consider <span class="math inline">\(g(x, y)\)</span> given by <span class="math display">\[
 g(x, y) = (x - 3)^2 + (y - 4)^2.
 \]</span></p>
 <p>Using elementary calculus derive the expressions for</p>
 <p><span class="math display">\[
 \frac{d}{dx}g(x, y), \quad \text{and} \quad \frac{d}{dy}g(x, y).
 \]</span></p>
-<p>Using your answer from above, what is the answer to</p>
-<p><span class="math display">\[
+<p>Using your answer from above, what is the answer to <span class="math display">\[
 \frac{d}{dx}g(x, y) \Bigg|_{(x=3, y=4)} \quad \text{and} \quad \frac{d}{dy}g(x, y) \Bigg|_{(x=3, y=4)} ?
 \]</span></p>
 <p>Define <span class="math inline">\(g(x, y)\)</span> as a function in R, compute the gradient of <span class="math inline">\(g(x, y)\)</span> with respect to <span class="math inline">\(x=3\)</span> and <span class="math inline">\(y=4\)</span>. Does the answer match what you expected?</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"numDeriv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>The following package(s) will be installed:
+- numDeriv [2016.8-1.1]
+These packages will be installed into "~/hw4/renv/library/R-4.3/x86_64-w64-mingw32".
+
+# Installing packages --------------------------------------------------------
+- Installing numDeriv ...                       OK [linked from cache]
+Successfully installed 1 package in 14 milliseconds.</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(numDeriv)</span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a>equation <span class="ot">&lt;-</span> <span class="cf">function</span>(point) {</span>
+<span id="cb36-4"><a href="#cb36-4" aria-hidden="true" tabindex="-1"></a>  x <span class="ot">&lt;-</span> point[<span class="dv">1</span>]</span>
+<span id="cb36-5"><a href="#cb36-5" aria-hidden="true" tabindex="-1"></a>  y <span class="ot">&lt;-</span> point[<span class="dv">2</span>]</span>
+<span id="cb36-6"><a href="#cb36-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>((x <span class="sc">-</span> <span class="dv">3</span>)<span class="sc">^</span><span class="dv">2</span> <span class="sc">+</span> (y <span class="sc">-</span> <span class="dv">4</span>)<span class="sc">^</span><span class="dv">2</span>)</span>
+<span id="cb36-7"><a href="#cb36-7" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb36-8"><a href="#cb36-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-9"><a href="#cb36-9" aria-hidden="true" tabindex="-1"></a><span class="fu">grad</span>(equation, <span class="fu">c</span>(<span class="dv">3</span>, <span class="dv">4</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0 0</code></pre>
+</div>
+</div>
+<p>The answer came out as i expected because the gradient would result in 2(x-3) for the partial diff for x and 2(y-4) for y and when we calc it with the respect for x and y we get &lt;0,0&gt;</p>
 <hr>
 </section>
 <section id="points-2" class="level6">
 <h6 class="anchored" data-anchor-id="points-2">1.2 (10 points)</h6>
 <p><span class="math display">\[\newcommand{\u}{\boldsymbol{u}}\newcommand{\v}{\boldsymbol{v}}\]</span></p>
-<p>Consider <span class="math inline">\(h(\u, \v)\)</span> given by</p>
-<p><span class="math display">\[
+<p>Consider <span class="math inline">\(h(\u, \v)\)</span> given by <span class="math display">\[
 h(\u, \v) = (\u \cdot \v)^3,
-\]</span></p>
-<p>where <span class="math inline">\(\u \cdot \v\)</span> denotes the dot product of two vectors, i.e., <span class="math inline">\(\u \cdot \v = \sum_{i=1}^n u_i v_i.\)</span></p>
+\]</span> where <span class="math inline">\(\u \cdot \v\)</span> denotes the dot product of two vectors, i.e., <span class="math inline">\(\u \cdot \v = \sum_{i=1}^n u_i v_i.\)</span></p>
 <p>Using elementary calculus derive the expressions for the gradients</p>
 <p><span class="math display">\[
 \begin{aligned}
@@ -230,46 +370,161 @@ h(\u, \v) = (\u \cdot \v)^3,
 \end{aligned}
 \]</span></p>
 <p>Define <span class="math inline">\(h(\u, \v)\)</span> as a function in R, initialize the two vectors <span class="math inline">\(\u\)</span> and <span class="math inline">\(\v\)</span> as <code>torch_tensor</code>s. Compute the gradient of <span class="math inline">\(h(\u, \v)\)</span> with respect to <span class="math inline">\(\u\)</span>. Does the answer match what you expected?</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"torch"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>The following package(s) will be installed:
+- torch [0.12.0]
+These packages will be installed into "~/hw4/renv/library/R-4.3/x86_64-w64-mingw32".
+
+# Installing packages --------------------------------------------------------
+- Installing torch ...                          OK [linked from cache]
+Successfully installed 1 package in 13 milliseconds.</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(torch)</span>
+<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a>h <span class="ot">&lt;-</span> <span class="cf">function</span>(u, v) {</span>
+<span id="cb40-4"><a href="#cb40-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>((<span class="fu">torch_dot</span>(u, v))<span class="sc">^</span><span class="dv">3</span>)</span>
+<span id="cb40-5"><a href="#cb40-5" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb40-6"><a href="#cb40-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb40-7"><a href="#cb40-7" aria-hidden="true" tabindex="-1"></a>gradient <span class="ot">&lt;-</span> <span class="cf">function</span>(u, v) {</span>
+<span id="cb40-8"><a href="#cb40-8" aria-hidden="true" tabindex="-1"></a>  uv <span class="ot">&lt;-</span> <span class="fu">torch_dot</span>(u, v)</span>
+<span id="cb40-9"><a href="#cb40-9" aria-hidden="true" tabindex="-1"></a>  gradient <span class="ot">&lt;-</span> <span class="dv">3</span> <span class="sc">*</span> uv<span class="sc">^</span><span class="dv">2</span> <span class="sc">*</span> v</span>
+<span id="cb40-10"><a href="#cb40-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(gradient)</span>
+<span id="cb40-11"><a href="#cb40-11" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb40-12"><a href="#cb40-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb40-13"><a href="#cb40-13" aria-hidden="true" tabindex="-1"></a>u <span class="ot">&lt;-</span> <span class="fu">torch_tensor</span>(<span class="fu">c</span>(<span class="sc">-</span><span class="dv">1</span>, <span class="dv">1</span>, <span class="sc">-</span><span class="dv">1</span>, <span class="dv">1</span>, <span class="sc">-</span><span class="dv">1</span>, <span class="dv">1</span>, <span class="sc">-</span><span class="dv">1</span>, <span class="dv">1</span>, <span class="sc">-</span><span class="dv">1</span>, <span class="dv">1</span>), <span class="at">dtype =</span> <span class="fu">torch_float</span>())</span>
+<span id="cb40-14"><a href="#cb40-14" aria-hidden="true" tabindex="-1"></a>v <span class="ot">&lt;-</span> <span class="fu">torch_tensor</span>(<span class="fu">c</span>(<span class="sc">-</span><span class="dv">1</span>, <span class="sc">-</span><span class="dv">1</span>, <span class="sc">-</span><span class="dv">1</span>, <span class="sc">-</span><span class="dv">1</span>, <span class="sc">-</span><span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>), <span class="at">dtype =</span> <span class="fu">torch_float</span>())</span>
+<span id="cb40-15"><a href="#cb40-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb40-16"><a href="#cb40-16" aria-hidden="true" tabindex="-1"></a><span class="fu">gradient</span>(u,v)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>torch_tensor
+-12
+-12
+-12
+-12
+-12
+ 12
+ 12
+ 12
+ 12
+ 12
+[ CPUFloatType{10} ]</code></pre>
+</div>
+</div>
 <hr>
 </section>
 <section id="points-3" class="level6">
 <h6 class="anchored" data-anchor-id="points-3">1.3 (5 points)</h6>
-<p>Consider the following function</p>
-<p><span class="math display">\[
+<p>Consider the following function <span class="math display">\[
 f(z) = z^4 - 6z^2 - 3z + 4
 \]</span></p>
-<p>Derive the expression for</p>
-<p><span class="math display">\[
+<p>Derive the expression for <span class="math display">\[
 f'(z_0) = \frac{df}{dz}\Bigg|_{z=z_0}
-\]</span></p>
-<p>and evaluate <span class="math inline">\(f'(z_0)\)</span> when <span class="math inline">\(z_0 = -3.5\)</span>.</p>
+\]</span> and evaluate <span class="math inline">\(f'(z_0)\)</span> when <span class="math inline">\(z_0 = -3.5\)</span>.</p>
 <p>Define <span class="math inline">\(f(z)\)</span> as a function in R, and using the <code>torch</code> library compute <span class="math inline">\(f'(-3.5)\)</span>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"numDeriv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>The following package(s) will be installed:
+- numDeriv [2016.8-1.1]
+These packages will be installed into "~/hw4/renv/library/R-4.3/x86_64-w64-mingw32".
+
+# Installing packages --------------------------------------------------------
+- Installing numDeriv ...                       OK [linked from cache]
+Successfully installed 1 package in 14 milliseconds.</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(numDeriv)</span>
+<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-3"><a href="#cb44-3" aria-hidden="true" tabindex="-1"></a>fz <span class="ot">&lt;-</span> <span class="cf">function</span>(z) {</span>
+<span id="cb44-4"><a href="#cb44-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(z<span class="sc">^</span><span class="dv">4</span> <span class="sc">-</span> <span class="dv">6</span><span class="sc">*</span>z<span class="sc">^</span><span class="dv">2</span> <span class="sc">-</span> <span class="dv">3</span><span class="sc">*</span>z <span class="sc">+</span> <span class="dv">4</span>)</span>
+<span id="cb44-5"><a href="#cb44-5" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb44-6"><a href="#cb44-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-7"><a href="#cb44-7" aria-hidden="true" tabindex="-1"></a>f_p <span class="ot">&lt;-</span> <span class="cf">function</span>(z) {</span>
+<span id="cb44-8"><a href="#cb44-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(<span class="dv">4</span><span class="sc">*</span>z<span class="sc">^</span><span class="dv">3</span> <span class="sc">-</span> <span class="dv">12</span><span class="sc">*</span>z <span class="sc">-</span> <span class="dv">3</span>)</span>
+<span id="cb44-9"><a href="#cb44-9" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb44-10"><a href="#cb44-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-11"><a href="#cb44-11" aria-hidden="true" tabindex="-1"></a>z_0 <span class="ot">&lt;-</span> <span class="sc">-</span><span class="fl">3.5</span></span>
+<span id="cb44-12"><a href="#cb44-12" aria-hidden="true" tabindex="-1"></a><span class="fu">f_p</span>(z_0)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] -132.5</code></pre>
+</div>
+</div>
 <hr>
 </section>
 <section id="points-4" class="level6">
 <h6 class="anchored" data-anchor-id="points-4">1.4 (5 points)</h6>
 <p>For the same function <span class="math inline">\(f\)</span>, initialize <span class="math inline">\(z[1] = -3.5\)</span>, and perform <span class="math inline">\(n=100\)</span> iterations of <strong>gradient descent</strong>, i.e.,</p>
 <blockquote class="blockquote">
-<p><span class="math inline">\(z[{k+1}] = z[k] - \eta f'(z[k]) \ \ \ \ \)</span> for <span class="math inline">\(k = 1, 2, \dots, 100\)</span></p>
+<p>$z[{k+1}] = z[k] - f’(z[k]) &nbsp;&nbsp;&nbsp;$ for <span class="math inline">\(k = 1, 2, \dots, 100\)</span></p>
 </blockquote>
 <p>Plot the curve <span class="math inline">\(f\)</span> and add taking <span class="math inline">\(\eta = 0.02\)</span>, add the points <span class="math inline">\(\{z_0, z_1, z_2, \dots z_{100}\}\)</span> obtained using gradient descent to the plot. What do you observe?</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a>gradient_descent <span class="ot">&lt;-</span> <span class="cf">function</span>(f, f_prime, z_0, eta, n) {</span>
+<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a>  z_v <span class="ot">&lt;-</span> <span class="fu">numeric</span>(n)</span>
+<span id="cb46-3"><a href="#cb46-3" aria-hidden="true" tabindex="-1"></a>  z_v[<span class="dv">1</span>] <span class="ot">&lt;-</span> z_0</span>
+<span id="cb46-4"><a href="#cb46-4" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb46-5"><a href="#cb46-5" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">2</span><span class="sc">:</span>n) {</span>
+<span id="cb46-6"><a href="#cb46-6" aria-hidden="true" tabindex="-1"></a>    z_v[i] <span class="ot">&lt;-</span> z_v[i <span class="sc">-</span> <span class="dv">1</span>] <span class="sc">-</span> eta <span class="sc">*</span> <span class="fu">f_prime</span>(z_v[i <span class="sc">-</span> <span class="dv">1</span>])</span>
+<span id="cb46-7"><a href="#cb46-7" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb46-8"><a href="#cb46-8" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb46-9"><a href="#cb46-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(z_v)</span>
+<span id="cb46-10"><a href="#cb46-10" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb46-11"><a href="#cb46-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-12"><a href="#cb46-12" aria-hidden="true" tabindex="-1"></a>z_0 <span class="ot">&lt;-</span> <span class="sc">-</span><span class="fl">3.5</span></span>
+<span id="cb46-13"><a href="#cb46-13" aria-hidden="true" tabindex="-1"></a>eta <span class="ot">&lt;-</span> <span class="fl">0.02</span></span>
+<span id="cb46-14"><a href="#cb46-14" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="dv">100</span></span>
+<span id="cb46-15"><a href="#cb46-15" aria-hidden="true" tabindex="-1"></a>z_v <span class="ot">&lt;-</span> <span class="fu">gradient_descent</span>(fz, f_p, z_0, eta, n)</span>
+<span id="cb46-16"><a href="#cb46-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-17"><a href="#cb46-17" aria-hidden="true" tabindex="-1"></a><span class="fu">curve</span>(fz, <span class="at">from =</span> <span class="sc">-</span><span class="dv">5</span>, <span class="at">to =</span> <span class="dv">5</span>, <span class="at">ylim =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">50</span>, <span class="dv">150</span>), <span class="at">xlab =</span> <span class="st">"z"</span>, <span class="at">ylab =</span> <span class="st">"f(z)"</span>)</span>
+<span id="cb46-18"><a href="#cb46-18" aria-hidden="true" tabindex="-1"></a><span class="fu">points</span>(z_v, <span class="fu">fz</span>(z_v))</span>
+<span id="cb46-19"><a href="#cb46-19" aria-hidden="true" tabindex="-1"></a><span class="fu">points</span>(z_0, <span class="fu">fz</span>(z_0), <span class="at">col =</span> <span class="st">"purple"</span>, <span class="at">pch =</span> <span class="dv">16</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="hm4_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>In the plot we can see that the inital point starts around f(z):100 and z:-3.5 and we see that the points marked during the decent are focused around f(z):0 and -2&lt; z &lt;-0.5</p>
 <hr>
 </section>
 <section id="points-5" class="level6">
 <h6 class="anchored" data-anchor-id="points-5">1.5 (5 points)</h6>
 <p>Redo the same analysis as <strong>Question 1.4</strong>, but this time using <span class="math inline">\(\eta = 0.03\)</span>. What do you observe? What can you conclude from this analysis</p>
-<p><br><br><br><br> <br><br><br><br></p>
-<hr>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a>gradient_descent <span class="ot">&lt;-</span> <span class="cf">function</span>(f, f_prime, z_0, eta, n) {</span>
+<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a>  z_v <span class="ot">&lt;-</span> <span class="fu">numeric</span>(n)</span>
+<span id="cb47-3"><a href="#cb47-3" aria-hidden="true" tabindex="-1"></a>  z_v[<span class="dv">1</span>] <span class="ot">&lt;-</span> z_0</span>
+<span id="cb47-4"><a href="#cb47-4" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb47-5"><a href="#cb47-5" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">2</span><span class="sc">:</span>n) {</span>
+<span id="cb47-6"><a href="#cb47-6" aria-hidden="true" tabindex="-1"></a>    z_v[i] <span class="ot">&lt;-</span> z_v[i <span class="sc">-</span> <span class="dv">1</span>] <span class="sc">-</span> eta <span class="sc">*</span> <span class="fu">f_prime</span>(z_v[i <span class="sc">-</span> <span class="dv">1</span>])</span>
+<span id="cb47-7"><a href="#cb47-7" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb47-8"><a href="#cb47-8" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb47-9"><a href="#cb47-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(z_v)</span>
+<span id="cb47-10"><a href="#cb47-10" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb47-11"><a href="#cb47-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-12"><a href="#cb47-12" aria-hidden="true" tabindex="-1"></a>z_0 <span class="ot">&lt;-</span> <span class="sc">-</span><span class="fl">3.5</span></span>
+<span id="cb47-13"><a href="#cb47-13" aria-hidden="true" tabindex="-1"></a>eta <span class="ot">&lt;-</span> <span class="fl">0.03</span></span>
+<span id="cb47-14"><a href="#cb47-14" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="dv">100</span></span>
+<span id="cb47-15"><a href="#cb47-15" aria-hidden="true" tabindex="-1"></a>z_v <span class="ot">&lt;-</span> <span class="fu">gradient_descent</span>(fz, f_p, z_0, eta, n)</span>
+<span id="cb47-16"><a href="#cb47-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-17"><a href="#cb47-17" aria-hidden="true" tabindex="-1"></a><span class="fu">curve</span>(fz, <span class="at">from =</span> <span class="sc">-</span><span class="dv">5</span>, <span class="at">to =</span> <span class="dv">5</span>, <span class="at">ylim =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">50</span>, <span class="dv">150</span>), <span class="at">xlab =</span> <span class="st">"z"</span>, <span class="at">ylab =</span> <span class="st">"f(z)"</span>)</span>
+<span id="cb47-18"><a href="#cb47-18" aria-hidden="true" tabindex="-1"></a><span class="fu">points</span>(z_v, <span class="fu">fz</span>(z_v))</span>
+<span id="cb47-19"><a href="#cb47-19" aria-hidden="true" tabindex="-1"></a><span class="fu">points</span>(z_0, <span class="fu">fz</span>(z_0), <span class="at">col =</span> <span class="st">"purple"</span>, <span class="at">pch =</span> <span class="dv">16</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="hm4_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>I can conclude that as η changes the gradient descent points also changes</p>
+<p><br><br><br><br> <br><br><br><br> —</p>
 </section>
 </section>
 <section id="question-2" class="level2">
 <h2 class="anchored" data-anchor-id="question-2">Question 2</h2>
-<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
+<div class="callout-title-container flex-fill">
 50 points
 </div>
 </div>
@@ -282,60 +537,94 @@ f'(z_0) = \frac{df}{dz}\Bigg|_{z=z_0}
 <section id="points-7" class="level6">
 <h6 class="anchored" data-anchor-id="points-7">2.1 (5 points)</h6>
 <p>Read the data from the following URL as a tibble in R. Preprocess the data such that the variables are of the right data type, e.g., binary variables are encoded as factors, and convert all column names to lower case for consistency. Let’s also rename the response variable <code>Survival</code> to <code>y</code> for convenience.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>url <span class="ot">&lt;-</span> <span class="st">"https://web.stanford.edu/class/archive/cs/cs109/cs109.1166/stuff/titanic.csv"</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> ... <span class="co"># Insert your code here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a>url <span class="ot">&lt;-</span> <span class="st">"https://web.stanford.edu/class/archive/cs/cs109/cs109.1166/stuff/titanic.csv"</span></span>
+<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(url)</span>
+<span id="cb48-3"><a href="#cb48-3" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(df) <span class="ot">&lt;-</span> <span class="fu">tolower</span>(<span class="fu">names</span>(df))</span>
+<span id="cb48-4"><a href="#cb48-4" aria-hidden="true" tabindex="-1"></a>binary_vars <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"survived"</span>, <span class="st">"sex"</span>)</span>
+<span id="cb48-5"><a href="#cb48-5" aria-hidden="true" tabindex="-1"></a>df[binary_vars] <span class="ot">&lt;-</span> <span class="fu">lapply</span>(df[binary_vars], as.factor)</span>
+<span id="cb48-6"><a href="#cb48-6" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(df)[<span class="fu">names</span>(df) <span class="sc">==</span> <span class="st">"survived"</span>] <span class="ot">&lt;-</span> <span class="st">"y"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <hr>
 </section>
 <section id="points-8" class="level6">
 <h6 class="anchored" data-anchor-id="points-8">2.2 (5 points)</h6>
 <p>Visualize the correlation matrix of all numeric columns in <code>df</code> using <code>corrplot()</code></p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>df <span class="sc">%&gt;%</span> ... <span class="co"># Insert your code here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a>df <span class="sc">%&gt;%</span></span>
+<span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a>  {corr_matrix <span class="ot">&lt;-</span> <span class="fu">cor</span>(.[<span class="fu">sapply</span>(., is.numeric)])</span>
+<span id="cb49-3"><a href="#cb49-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">corrplot</span>(corr_matrix)}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="hm4_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
 <hr>
 </section>
 <section id="points-9" class="level6">
 <h6 class="anchored" data-anchor-id="points-9">2.3 (10 points)</h6>
 <p>Fit a logistic regression model to predict the probability of surviving the titanic as a function of:</p>
 <ul>
-<li><code>pclass</code></li>
-<li><code>sex</code></li>
-<li><code>age</code></li>
-<li><code>fare</code></li>
-<li><code># siblings</code></li>
-<li><code># parents</code></li>
+<li><p><code>pclass</code></p></li>
+<li><p><code>sex</code></p></li>
+<li><p><code>age</code></p></li>
+<li><p><code>fare</code></p></li>
+<li><p><code># siblings</code></p></li>
+<li><p><code># parents</code></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb50"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a>full_model <span class="ot">&lt;-</span>  <span class="fu">glm</span>(y <span class="sc">~</span> pclass <span class="sc">+</span> sex <span class="sc">+</span> age <span class="sc">+</span> fare <span class="sc">+</span> siblings.spouses.aboard <span class="sc">+</span> parents.children.aboard,<span class="at">data =</span> df,<span class="at">family =</span> binomial)</span>
+<span id="cb50-2"><a href="#cb50-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-3"><a href="#cb50-3" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(full_model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+glm(formula = y ~ pclass + sex + age + fare + siblings.spouses.aboard + 
+    parents.children.aboard, family = binomial, data = df)
+
+Coefficients:
+                         Estimate Std. Error z value Pr(&gt;|z|)    
+(Intercept)              5.297252   0.557409   9.503  &lt; 2e-16 ***
+pclass                  -1.177659   0.146079  -8.062 7.52e-16 ***
+sexmale                 -2.757282   0.200416 -13.758  &lt; 2e-16 ***
+age                     -0.043474   0.007723  -5.629 1.81e-08 ***
+fare                     0.002786   0.002389   1.166 0.243680    
+siblings.spouses.aboard -0.401831   0.110712  -3.630 0.000284 ***
+parents.children.aboard -0.106505   0.118588  -0.898 0.369127    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 1182.77  on 886  degrees of freedom
+Residual deviance:  780.93  on 880  degrees of freedom
+AIC: 794.93
+
+Number of Fisher Scoring iterations: 5</code></pre>
+</div>
+</div></li>
 </ul>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>full_model <span class="ot">&lt;-</span> ... <span class="co"># Insert your code here</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(full_model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <hr>
 </section>
 <section id="points-10" class="level6">
 <h6 class="anchored" data-anchor-id="points-10">2.4 (30 points)</h6>
 <p>Provide an interpretation for the slope and intercept terms estimated in <code>full_model</code> in terms of the log-odds of survival in the titanic and in terms of the odds-ratio (if the covariate is also categorical).</p>
-<div class="callout-hint callout callout-style-default no-icon callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<p>The intercept means that the log odds of survival for a particular passenger is about 5.297252</p>
+<p>the slope term estimates mean the change of log odds of survival for a variable and it differs from variable to variable such as the odds of survival depending on how much a person paid for a ticket and their age</p>
+<p>the odds ratio means the change in the odds between 2 different groups for example within the age variable there should be a difference between the odds of survival if you’re over 65 and if you’re under 18 and there should be a difference within the sex variable meaning a difference of survival odds between males and females</p>
+</section>
+</section>
+<section id="section-1" class="level2 callout-hint">
+<h2 class="anchored" data-anchor-id="section-1"></h2>
 <p>Recall the definition of logistic regression from the lecture notes, and also recall how we interpreted the slope in the linear regression model (particularly when the covariate was categorical).</p>
-</div>
-</div>
-<p><br><br><br><br> <br><br><br><br></p>
-<hr>
 </section>
-</section>
+<p><br><br><br><br> <br><br><br><br> —</p>
 <section id="question-3" class="level2">
 <h2 class="anchored" data-anchor-id="question-3">Question 3</h2>
-<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
+<div class="callout-title-container flex-fill">
 70 points
 </div>
 </div>
@@ -348,151 +637,455 @@ f'(z_0) = \frac{df}{dz}\Bigg|_{z=z_0}
 <h6 class="anchored" data-anchor-id="points-12">3.1 (15 points)</h6>
 <p>Complete the following function <code>overview</code> which takes in two categorical vectors (<code>predicted</code> and <code>expected</code>) and outputs:</p>
 <ul>
-<li>The prediction accuracy</li>
-<li>The prediction error</li>
-<li>The false positive rate, and</li>
-<li>The false negative rate</li>
+<li><p>The prediction accuracy</p></li>
+<li><p>The prediction error</p></li>
+<li><p>The false positive rate, and</p></li>
+<li><p>The false negative rate</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a>overview <span class="ot">&lt;-</span> <span class="cf">function</span>(predicted, expected){</span>
+<span id="cb52-2"><a href="#cb52-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-3"><a href="#cb52-3" aria-hidden="true" tabindex="-1"></a>    accuracy <span class="ot">&lt;-</span> <span class="fu">sum</span>(predicted <span class="sc">==</span> expected) <span class="sc">/</span> <span class="fu">length</span>(expected)</span>
+<span id="cb52-4"><a href="#cb52-4" aria-hidden="true" tabindex="-1"></a>    error <span class="ot">&lt;-</span> <span class="dv">1</span> <span class="sc">-</span> accuracy</span>
+<span id="cb52-5"><a href="#cb52-5" aria-hidden="true" tabindex="-1"></a>    total_false_positives <span class="ot">&lt;-</span> <span class="fu">sum</span>(predicted <span class="sc">==</span> <span class="dv">1</span> <span class="sc">&amp;</span> expected <span class="sc">==</span> <span class="dv">1</span>)</span>
+<span id="cb52-6"><a href="#cb52-6" aria-hidden="true" tabindex="-1"></a>    total_true_positives <span class="ot">&lt;-</span> <span class="fu">sum</span>(predicted <span class="sc">==</span> <span class="dv">0</span> <span class="sc">&amp;</span> expected <span class="sc">==</span> <span class="dv">0</span>)</span>
+<span id="cb52-7"><a href="#cb52-7" aria-hidden="true" tabindex="-1"></a>    total_false_negatives <span class="ot">&lt;-</span> <span class="fu">sum</span>(predicted <span class="sc">==</span> <span class="dv">1</span> <span class="sc">&amp;</span> expected <span class="sc">==</span> <span class="dv">0</span>)</span>
+<span id="cb52-8"><a href="#cb52-8" aria-hidden="true" tabindex="-1"></a>    total_true_negatives <span class="ot">&lt;-</span> <span class="fu">sum</span>(predicted <span class="sc">==</span> <span class="dv">0</span> <span class="sc">&amp;</span> expected <span class="sc">==</span> <span class="dv">1</span>)</span>
+<span id="cb52-9"><a href="#cb52-9" aria-hidden="true" tabindex="-1"></a>    false_positive_rate <span class="ot">&lt;-</span> total_false_positives <span class="sc">/</span> (total_false_positives <span class="sc">+</span> total_true_negatives)</span>
+<span id="cb52-10"><a href="#cb52-10" aria-hidden="true" tabindex="-1"></a>    false_negative_rate <span class="ot">&lt;-</span> total_false_negatives <span class="sc">/</span> (total_false_negatives <span class="sc">+</span> total_true_positives)</span>
+<span id="cb52-11"><a href="#cb52-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-12"><a href="#cb52-12" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(</span>
+<span id="cb52-13"><a href="#cb52-13" aria-hidden="true" tabindex="-1"></a>        <span class="fu">data.frame</span>(</span>
+<span id="cb52-14"><a href="#cb52-14" aria-hidden="true" tabindex="-1"></a>            <span class="at">accuracy =</span> accuracy, </span>
+<span id="cb52-15"><a href="#cb52-15" aria-hidden="true" tabindex="-1"></a>            <span class="at">error=</span>error, </span>
+<span id="cb52-16"><a href="#cb52-16" aria-hidden="true" tabindex="-1"></a>            <span class="at">false_positive_rate =</span> false_positive_rate, </span>
+<span id="cb52-17"><a href="#cb52-17" aria-hidden="true" tabindex="-1"></a>            <span class="at">false_negative_rate =</span> false_negative_rate</span>
+<span id="cb52-18"><a href="#cb52-18" aria-hidden="true" tabindex="-1"></a>        )</span>
+<span id="cb52-19"><a href="#cb52-19" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb52-20"><a href="#cb52-20" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></li>
 </ul>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>overview <span class="ot">&lt;-</span> <span class="cf">function</span>(predicted, expected){</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    accuracy <span class="ot">&lt;-</span> ... <span class="co"># Insert your code here</span></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    error <span class="ot">&lt;-</span> ... <span class="co"># Insert your code here</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    total_false_positives <span class="ot">&lt;-</span> ... <span class="co"># Insert your code here</span></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    total_true_positives <span class="ot">&lt;-</span> ... <span class="co"># Insert your code here</span></span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    total_false_negatives <span class="ot">&lt;-</span> ... <span class="co"># Insert your code here</span></span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>    total_true_negatives <span class="ot">&lt;-</span> ... <span class="co"># Insert your code here</span></span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>    false_positive_rate <span class="ot">&lt;-</span> ... <span class="co"># Insert your code here</span></span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>    false_negative_rate <span class="ot">&lt;-</span> ... <span class="co"># Insert your code here</span></span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(</span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>        <span class="fu">data.frame</span>(</span>
-<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>            <span class="at">accuracy =</span> accuracy, </span>
-<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>            <span class="at">error=</span>error, </span>
-<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>            <span class="at">false_positive_rate =</span> false_positive_rate, </span>
-<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>            <span class="at">false_negative_rate =</span> false_negative_rate</span>
-<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>        )</span>
-<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>You can check if your function is doing what it’s supposed to do by evaluating</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">overview</span>(df<span class="sc">$</span>y, df<span class="sc">$</span>y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>and making sure that the accuracy is <span class="math inline">\(100\%\)</span> while the errors are <span class="math inline">\(0\%\)</span>.</p>
-<hr>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="fu">overview</span>(df<span class="sc">$</span>y, df<span class="sc">$</span>y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  accuracy error false_positive_rate false_negative_rate
+1        1     0                   1                   0</code></pre>
+</div>
+</div>
 </section>
+</section>
+<section id="and-making-sure-that-the-accuracy-is-100-while-the-errors-are-0." class="level2">
+<h2 class="anchored" data-anchor-id="and-making-sure-that-the-accuracy-is-100-while-the-errors-are-0.">and making sure that the accuracy is <span class="math inline">\(100\%\)</span> while the errors are <span class="math inline">\(0\%\)</span>.</h2>
 <section id="points-13" class="level6">
 <h6 class="anchored" data-anchor-id="points-13">3.2 (5 points)</h6>
 <p>Display an overview of the key performance metrics of <code>full_model</code></p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>... <span class="co"># Insert your code here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a>predicted <span class="ot">&lt;-</span> <span class="fu">ifelse</span>(<span class="fu">predict</span>(full_model, <span class="at">type =</span> <span class="st">"response"</span>) <span class="sc">&gt;</span> <span class="fl">0.5</span>, <span class="dv">1</span>, <span class="dv">0</span>)</span>
+<span id="cb55-2"><a href="#cb55-2" aria-hidden="true" tabindex="-1"></a>expected <span class="ot">&lt;-</span> df<span class="sc">$</span>y  </span>
+<span id="cb55-3"><a href="#cb55-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb55-4"><a href="#cb55-4" aria-hidden="true" tabindex="-1"></a>performance_metrics <span class="ot">&lt;-</span> <span class="fu">overview</span>(predicted, expected)</span>
+<span id="cb55-5"><a href="#cb55-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb55-6"><a href="#cb55-6" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(performance_metrics)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   accuracy     error false_positive_rate false_negative_rate
+1 0.8015784 0.1984216           0.6988304            0.133945</code></pre>
+</div>
+</div>
 <hr>
 </section>
 <section id="points-14" class="level6">
 <h6 class="anchored" data-anchor-id="points-14">3.3 (5 points)</h6>
 <p>Using backward-stepwise logistic regression, find a parsimonious altenative to <code>full_model</code>, and print its <code>overview</code></p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>step_model <span class="ot">&lt;-</span> ... <span class="co"># Insert your code here. </span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(step_model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>step_predictions <span class="ot">&lt;-</span> ... <span class="co"># Insert your code here</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">overview</span>(step_predictions, df<span class="sc">$</span>y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb57"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a>step_model <span class="ot">&lt;-</span> <span class="fu">step</span>(full_model, <span class="at">direction =</span> <span class="st">"backward"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Start:  AIC=794.93
+y ~ pclass + sex + age + fare + siblings.spouses.aboard + parents.children.aboard
+
+                          Df Deviance     AIC
+- parents.children.aboard  1   781.75  793.75
+- fare                     1   782.43  794.43
+&lt;none&gt;                         780.93  794.93
+- siblings.spouses.aboard  1   796.85  808.85
+- age                      1   815.81  827.81
+- pclass                   1   847.84  859.84
+- sex                      1  1021.33 1033.33
+
+Step:  AIC=793.75
+y ~ pclass + sex + age + fare + siblings.spouses.aboard
+
+                          Df Deviance     AIC
+- fare                     1   782.88  792.88
+&lt;none&gt;                         781.75  793.75
+- siblings.spouses.aboard  1   801.59  811.59
+- age                      1   816.44  826.44
+- pclass                   1   852.19  862.19
+- sex                      1  1025.55 1035.55
+
+Step:  AIC=792.88
+y ~ pclass + sex + age + siblings.spouses.aboard
+
+                          Df Deviance     AIC
+&lt;none&gt;                         782.88  792.88
+- siblings.spouses.aboard  1   801.61  809.61
+- age                      1   818.41  826.41
+- pclass                   1   900.80  908.80
+- sex                      1  1031.86 1039.86</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb59"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(step_model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+glm(formula = y ~ pclass + sex + age + siblings.spouses.aboard, 
+    family = binomial, data = df)
+
+Coefficients:
+                         Estimate Std. Error z value Pr(&gt;|z|)    
+(Intercept)              5.532066   0.504750  10.960  &lt; 2e-16 ***
+pclass                  -1.265129   0.127021  -9.960  &lt; 2e-16 ***
+sexmale                 -2.736487   0.195730 -13.981  &lt; 2e-16 ***
+age                     -0.043697   0.007695  -5.679 1.36e-08 ***
+siblings.spouses.aboard -0.407770   0.105197  -3.876 0.000106 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 1182.77  on 886  degrees of freedom
+Residual deviance:  782.88  on 882  degrees of freedom
+AIC: 792.88
+
+Number of Fisher Scoring iterations: 5</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb61"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb61-1"><a href="#cb61-1" aria-hidden="true" tabindex="-1"></a>step_predictions <span class="ot">&lt;-</span> <span class="fu">ifelse</span>(<span class="fu">predict</span>(step_model, <span class="at">type =</span> <span class="st">"response"</span>) <span class="sc">&gt;</span> <span class="fl">0.5</span>, <span class="dv">1</span>, <span class="dv">0</span>)</span>
+<span id="cb61-2"><a href="#cb61-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(step_predictions)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+ 0.0000  0.0000  0.0000  0.3551  1.0000  1.0000 </code></pre>
+</div>
+</div>
 <hr>
 </section>
 <section id="points-15" class="level6">
 <h6 class="anchored" data-anchor-id="points-15">3.4 (15 points)</h6>
-<p>Using the <code>caret</code> package, setup a <strong><span class="math inline">\(5\)</span>-fold cross-validation</strong> training method using the <code>caret::trainConrol()</code> function</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>controls <span class="ot">&lt;-</span> <span class="fu">trainControl</span>() <span class="co"># ... insert your code here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Using the <code>caret</code> package, setup a <span class="math inline">\(5\)</span>-fold cross-validation training method using the <code>caret::trainConrol()</code> function</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb63"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb63-1"><a href="#cb63-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(caret)</span>
+<span id="cb63-2"><a href="#cb63-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb63-3"><a href="#cb63-3" aria-hidden="true" tabindex="-1"></a>controls <span class="ot">&lt;-</span> <span class="fu">trainControl</span>(<span class="at">method =</span> <span class="st">"cv"</span>, <span class="at">number =</span> <span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p>Now, using <code>control</code>, perform <span class="math inline">\(5\)</span>-fold cross validation using <code>caret::train()</code> to select the optimal <span class="math inline">\(\lambda\)</span> parameter for LASSO with logistic regression.</p>
 <p>Take the search grid for <span class="math inline">\(\lambda\)</span> to be in <span class="math inline">\(\{ 2^{-20}, 2^{-19.5}, 2^{-19}, \dots, 2^{-0.5}, 2^{0} \}\)</span>.</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Insert your code in the ... region</span></span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>lasso_fit <span class="ot">&lt;-</span> <span class="fu">train</span>(</span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">x =</span> ...,</span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">y =</span> ...,</span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">method =</span> ...,</span>
-<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">trControl =</span> controls, </span>
-<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">tuneGrid =</span> <span class="fu">expand.grid</span>(</span>
-<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">alpha =</span> ...,</span>
-<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">lambda =</span> <span class="dv">2</span><span class="sc">^</span><span class="fu">seq</span>(<span class="sc">-</span><span class="dv">20</span>, <span class="dv">0</span>, <span class="at">by =</span> <span class="fl">0.5</span>)</span>
-<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>    ),</span>
-<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">family =</span> ...</span>
-<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb64"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb64-1"><a href="#cb64-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Insert your code in the ... region</span></span>
+<span id="cb64-2"><a href="#cb64-2" aria-hidden="true" tabindex="-1"></a>lasso_fit <span class="ot">&lt;-</span> <span class="fu">train</span>(</span>
+<span id="cb64-3"><a href="#cb64-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">x =</span> df[, <span class="fu">c</span>(<span class="st">"pclass"</span>, <span class="st">"age"</span>, <span class="st">"siblings.spouses.aboard"</span>, <span class="st">"parents.children.aboard"</span>, <span class="st">"fare"</span>)], </span>
+<span id="cb64-4"><a href="#cb64-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">y =</span> df<span class="sc">$</span>y, </span>
+<span id="cb64-5"><a href="#cb64-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">method =</span> <span class="st">"glmnet"</span>,</span>
+<span id="cb64-6"><a href="#cb64-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">trControl =</span> controls, </span>
+<span id="cb64-7"><a href="#cb64-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">tuneGrid =</span> <span class="fu">expand.grid</span>(</span>
+<span id="cb64-8"><a href="#cb64-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">alpha =</span> <span class="dv">1</span>,</span>
+<span id="cb64-9"><a href="#cb64-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">lambda =</span> <span class="dv">2</span><span class="sc">^</span><span class="fu">seq</span>(<span class="sc">-</span><span class="dv">20</span>, <span class="dv">0</span>, <span class="at">by =</span> <span class="fl">0.5</span>)</span>
+<span id="cb64-10"><a href="#cb64-10" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb64-11"><a href="#cb64-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">family =</span> <span class="st">"binomial"</span></span>
+<span id="cb64-12"><a href="#cb64-12" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb64-13"><a href="#cb64-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb64-14"><a href="#cb64-14" aria-hidden="true" tabindex="-1"></a>lasso_fit</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>glmnet 
+
+887 samples
+  5 predictor
+  2 classes: '0', '1' 
+
+No pre-processing
+Resampling: Cross-Validated (5 fold) 
+Summary of sample sizes: 710, 710, 709, 710, 709 
+Resampling results across tuning parameters:
+
+  lambda        Accuracy   Kappa    
+  9.536743e-07  0.7012379  0.3328278
+  1.348699e-06  0.7012379  0.3328278
+  1.907349e-06  0.7012379  0.3328278
+  2.697398e-06  0.7012379  0.3328278
+  3.814697e-06  0.7012379  0.3328278
+  5.394797e-06  0.7012379  0.3328278
+  7.629395e-06  0.7012379  0.3328278
+  1.078959e-05  0.7012379  0.3328278
+  1.525879e-05  0.7012379  0.3328278
+  2.157919e-05  0.7012379  0.3328278
+  3.051758e-05  0.7012379  0.3328278
+  4.315837e-05  0.7012379  0.3328278
+  6.103516e-05  0.7012379  0.3328278
+  8.631675e-05  0.7012379  0.3328278
+  1.220703e-04  0.7012379  0.3328278
+  1.726335e-04  0.7012379  0.3328278
+  2.441406e-04  0.7012379  0.3328278
+  3.452670e-04  0.7012379  0.3328278
+  4.882812e-04  0.7012379  0.3328278
+  6.905340e-04  0.7012379  0.3328278
+  9.765625e-04  0.7012379  0.3328278
+  1.381068e-03  0.7001079  0.3297930
+  1.953125e-03  0.6989780  0.3268197
+  2.762136e-03  0.7023678  0.3341293
+  3.906250e-03  0.7012506  0.3307077
+  5.524272e-03  0.7023805  0.3328530
+  7.812500e-03  0.7046277  0.3364004
+  1.104854e-02  0.7012379  0.3260707
+  1.562500e-02  0.7034851  0.3308116
+  2.209709e-02  0.7012379  0.3243776
+  3.125000e-02  0.7080112  0.3369704
+  4.419417e-02  0.6978607  0.3158997
+  6.250000e-02  0.6787025  0.2714369
+  8.838835e-02  0.6460293  0.1468299
+  1.250000e-01  0.6144353  0.0000000
+  1.767767e-01  0.6144353  0.0000000
+  2.500000e-01  0.6144353  0.0000000
+  3.535534e-01  0.6144353  0.0000000
+  5.000000e-01  0.6144353  0.0000000
+  7.071068e-01  0.6144353  0.0000000
+  1.000000e+00  0.6144353  0.0000000
+
+Tuning parameter 'alpha' was held constant at a value of 1
+Accuracy was used to select the optimal model using the largest value.
+The final values used for the model were alpha = 1 and lambda = 0.03125.</code></pre>
+</div>
+</div>
 <p>Using the information stored in <code>lasso_fit$results</code>, plot the results for cross-validation accuracy vs.&nbsp;<span class="math inline">\(log_2(\lambda)\)</span>. Choose the optimal <span class="math inline">\(\lambda^*\)</span>, and report your results for this value of <span class="math inline">\(\lambda^*\)</span>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb66"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb66-1"><a href="#cb66-1" aria-hidden="true" tabindex="-1"></a>results_df <span class="ot">&lt;-</span> lasso_fit<span class="sc">$</span>results</span>
+<span id="cb66-2"><a href="#cb66-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb66-3"><a href="#cb66-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(results_df<span class="sc">$</span>lambda, results_df<span class="sc">$</span>Accuracy, <span class="at">xlab =</span> <span class="st">"log2(lambda)"</span>, <span class="at">ylab =</span> <span class="st">"accuracy"</span>, <span class="at">main =</span> <span class="st">"accuracy vs log2_lamda"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="hm4_files/figure-html/unnamed-chunk-17-1.png" class="img-fluid" width="672"></p>
+</div>
+<div class="sourceCode cell-code" id="cb67"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb67-1"><a href="#cb67-1" aria-hidden="true" tabindex="-1"></a>optimal <span class="ot">&lt;-</span> results_df<span class="sc">$</span>lambda[<span class="fu">which.max</span>(results_df<span class="sc">$</span>Accuracy)]</span>
+<span id="cb67-2"><a href="#cb67-2" aria-hidden="true" tabindex="-1"></a>optimal</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.03125</code></pre>
+</div>
+</div>
 <hr>
 </section>
 <section id="points-16" class="level6">
 <h6 class="anchored" data-anchor-id="points-16">3.5 (25 points)</h6>
 <p>First, use the <code>model.matrix()</code> function to convert the covariates of <code>df</code> to a matrix format</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>covariate_matrix <span class="ot">&lt;-</span> <span class="fu">model.matrix</span>(full_model)[, <span class="sc">-</span><span class="dv">1</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb69"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb69-1"><a href="#cb69-1" aria-hidden="true" tabindex="-1"></a>covariate_matrix <span class="ot">&lt;-</span> <span class="fu">model.matrix</span>(full_model)[, <span class="sc">-</span><span class="dv">1</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p>Now, initialize the covariates <span class="math inline">\(X\)</span> and the response <span class="math inline">\(y\)</span> as <code>torch</code> tensors</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>X <span class="ot">&lt;-</span> ... <span class="co"># Insert your code here</span></span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> ... <span class="co"># Insert your code here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb70"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb70-1"><a href="#cb70-1" aria-hidden="true" tabindex="-1"></a>X <span class="ot">&lt;-</span> <span class="fu">torch_tensor</span>(covariate_matrix, <span class="at">dtype =</span> <span class="fu">torch_float</span>())</span>
+<span id="cb70-2"><a href="#cb70-2" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fu">torch_tensor</span>(df<span class="sc">$</span>y, <span class="at">dtype =</span> <span class="fu">torch_float</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p>Using the <code>torch</code> library, initialize an <code>nn_module</code> which performs logistic regression for this dataset. (Remember that we have 6 different covariates)</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>logistic <span class="ot">&lt;-</span> <span class="fu">nn_module</span>(</span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">initialize =</span> <span class="cf">function</span>() {</span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>    self<span class="sc">$</span>f <span class="ot">&lt;-</span> ... <span class="co"># Insert your code here</span></span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>    self<span class="sc">$</span>g <span class="ot">&lt;-</span> ... <span class="co"># Insert your code here</span></span>
-<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>  },</span>
-<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">forward =</span> <span class="cf">function</span>(x) {</span>
-<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>    ... <span class="co"># Insert your code here</span></span>
-<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a>f <span class="ot">&lt;-</span> <span class="fu">logistic</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb71"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb71-1"><a href="#cb71-1" aria-hidden="true" tabindex="-1"></a>logistic <span class="ot">&lt;-</span> <span class="fu">nn_module</span>(</span>
+<span id="cb71-2"><a href="#cb71-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">initialize =</span> <span class="cf">function</span>() {</span>
+<span id="cb71-3"><a href="#cb71-3" aria-hidden="true" tabindex="-1"></a>    self<span class="sc">$</span>f <span class="ot">&lt;-</span> <span class="fu">torch_randn</span>(<span class="dv">6</span>, <span class="dv">1</span>, <span class="at">dtype =</span> <span class="fu">torch_float</span>(), <span class="at">requires_grad =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb71-4"><a href="#cb71-4" aria-hidden="true" tabindex="-1"></a>    self<span class="sc">$</span>g <span class="ot">&lt;-</span> <span class="fu">torch_zeros</span>(<span class="dv">1</span>, <span class="at">dtype =</span> <span class="fu">torch_float</span>(), <span class="at">requires_grad =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb71-5"><a href="#cb71-5" aria-hidden="true" tabindex="-1"></a>  },</span>
+<span id="cb71-6"><a href="#cb71-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">forward =</span> <span class="cf">function</span>(x) {</span>
+<span id="cb71-7"><a href="#cb71-7" aria-hidden="true" tabindex="-1"></a>    linear <span class="ot">&lt;-</span> <span class="fu">torch_addmm</span>(self<span class="sc">$</span>g, x, self<span class="sc">$</span>f)</span>
+<span id="cb71-8"><a href="#cb71-8" aria-hidden="true" tabindex="-1"></a>    output <span class="ot">&lt;-</span> <span class="fu">torch_sigmoid</span>(linear)</span>
+<span id="cb71-9"><a href="#cb71-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(output)</span>
+<span id="cb71-10"><a href="#cb71-10" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb71-11"><a href="#cb71-11" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb71-12"><a href="#cb71-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb71-13"><a href="#cb71-13" aria-hidden="true" tabindex="-1"></a>f <span class="ot">&lt;-</span> <span class="fu">logistic</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p>You can verify that your code is right by checking that the output to the following code is a vector of probabilities:</p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">f</span>(X)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb72"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb72-1"><a href="#cb72-1" aria-hidden="true" tabindex="-1"></a><span class="fu">f</span>(X)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>torch_tensor
+ 0.6844
+ 0.0000
+ 0.3312
+ 0.0000
+ 0.2576
+ 0.3510
+ 0.0000
+ 0.2818
+ 0.1934
+ 0.0004
+ 0.2307
+ 0.0000
+ 0.5072
+ 0.0006
+ 0.5476
+ 0.0011
+ 0.0475
+ 0.0424
+ 0.0218
+ 0.4554
+ 0.0002
+ 0.0196
+ 0.5150
+ 0.0000
+ 0.1533
+ 0.0004
+ 0.4674
+ 0.0000
+ 0.3677
+ 0.4658
+... [the output was truncated (use n=-1 to disable)]
+[ CPUFloatType{887,1} ][ grad_fn = &lt;SigmoidBackward0&gt; ]</code></pre>
+</div>
+</div>
 <p>Now, define the loss function <code>Loss()</code> which takes in two tensors <code>X</code> and <code>y</code> and a function <code>Fun</code>, and outputs the <strong>Binary cross Entropy loss</strong> between <code>Fun(X)</code> and <code>y</code>.</p>
-<div class="sourceCode" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>Loss <span class="ot">&lt;-</span> <span class="cf">function</span>(X, y, Fun){</span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>  ... <span class="co"># Insert our code here</span></span>
-<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb74"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb74-1"><a href="#cb74-1" aria-hidden="true" tabindex="-1"></a>Loss <span class="ot">&lt;-</span> <span class="cf">function</span>(X, y, Fun) {</span>
+<span id="cb74-2"><a href="#cb74-2" aria-hidden="true" tabindex="-1"></a>  linear <span class="ot">&lt;-</span> <span class="fu">torch_addmm</span>(Fun<span class="sc">$</span>g, X, Fun<span class="sc">$</span>f)</span>
+<span id="cb74-3"><a href="#cb74-3" aria-hidden="true" tabindex="-1"></a>  output <span class="ot">&lt;-</span> <span class="fu">torch_sigmoid</span>(linear)</span>
+<span id="cb74-4"><a href="#cb74-4" aria-hidden="true" tabindex="-1"></a>  loss <span class="ot">&lt;-</span> <span class="fu">nn_bce_loss</span>()(output, y)</span>
+<span id="cb74-5"><a href="#cb74-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(loss)</span>
+<span id="cb74-6"><a href="#cb74-6" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p>Initialize an optimizer using <code>optim_adam()</code> and perform <span class="math inline">\(n=1000\)</span> steps of gradient descent in order to fit logistic regression using <code>torch</code>.</p>
-<div class="sourceCode" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>f <span class="ot">&lt;-</span> <span class="fu">logistic</span>()</span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>optimizer <span class="ot">&lt;-</span> <span class="fu">optim_adam</span>(...) <span class="co"># Insert your code here</span></span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="dv">1000</span></span>
-<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>...  <span class="co"># Insert your code for gradient descent here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb75"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb75-1"><a href="#cb75-1" aria-hidden="true" tabindex="-1"></a>f <span class="ot">&lt;-</span> <span class="fu">logistic</span>()</span>
+<span id="cb75-2"><a href="#cb75-2" aria-hidden="true" tabindex="-1"></a>optimizer <span class="ot">&lt;-</span> <span class="fu">optim_adam</span>(<span class="fu">list</span>(f<span class="sc">$</span>f, f<span class="sc">$</span>g), <span class="at">lr =</span> <span class="fl">0.01</span>) <span class="co"># Insert your code here</span></span>
+<span id="cb75-3"><a href="#cb75-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb75-4"><a href="#cb75-4" aria-hidden="true" tabindex="-1"></a>n_steps <span class="ot">&lt;-</span> <span class="dv">1000</span></span>
+<span id="cb75-5"><a href="#cb75-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>n_steps) {</span>
+<span id="cb75-6"><a href="#cb75-6" aria-hidden="true" tabindex="-1"></a>  optimizer<span class="sc">$</span><span class="fu">zero_grad</span>()</span>
+<span id="cb75-7"><a href="#cb75-7" aria-hidden="true" tabindex="-1"></a>  loss <span class="ot">&lt;-</span> <span class="fu">Loss</span>(X, y, f)</span>
+<span id="cb75-8"><a href="#cb75-8" aria-hidden="true" tabindex="-1"></a>  loss<span class="sc">$</span><span class="fu">backward</span>()</span>
+<span id="cb75-9"><a href="#cb75-9" aria-hidden="true" tabindex="-1"></a>  optimizer<span class="sc">$</span><span class="fu">step</span>()</span>
+<span id="cb75-10"><a href="#cb75-10" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb75-11"><a href="#cb75-11" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (i <span class="sc">%%</span> <span class="dv">100</span> <span class="sc">==</span> <span class="dv">0</span>) {</span>
+<span id="cb75-12"><a href="#cb75-12" aria-hidden="true" tabindex="-1"></a>    <span class="fu">cat</span>(<span class="st">'Step:'</span>, i, <span class="st">'Loss:'</span>, <span class="fu">as.array</span>(loss), <span class="st">'</span><span class="sc">\n</span><span class="st">'</span>)</span>
+<span id="cb75-13"><a href="#cb75-13" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb75-14"><a href="#cb75-14" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Step: 100 Loss: -22.44737 
+Step: 200 Loss: -28.71027 
+Step: 300 Loss: -32.73769 
+Step: 400 Loss: -35.66858 
+Step: 500 Loss: -36.54509 
+Step: 600 Loss: -37.50091 
+Step: 700 Loss: -37.69292 
+Step: 800 Loss: -38.0751 
+Step: 900 Loss: -38.07585 
+Step: 1000 Loss: -38.07661 </code></pre>
+</div>
+</div>
 <p>Using the final, optimized parameters of <code>f</code>, compute the compute the predicted results on <code>X</code></p>
-<div class="sourceCode" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>predicted_probabilities <span class="ot">&lt;-</span> <span class="fu">f</span>(X) <span class="sc">%&gt;%</span> <span class="fu">as_array</span>()</span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>torch_predictions <span class="ot">&lt;-</span> ... <span class="co"># Insert your code here</span></span>
-<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="fu">overview</span>(torch_predictions, df<span class="sc">$</span>y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb77"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb77-1"><a href="#cb77-1" aria-hidden="true" tabindex="-1"></a>predicted_probabilities <span class="ot">&lt;-</span> <span class="fu">f</span>(X) <span class="sc">%&gt;%</span> <span class="fu">as_array</span>()</span>
+<span id="cb77-2"><a href="#cb77-2" aria-hidden="true" tabindex="-1"></a>torch_predictions <span class="ot">&lt;-</span> <span class="fu">ifelse</span>(predicted_probabilities <span class="sc">&gt;</span> <span class="fl">0.5</span>, <span class="dv">1</span>, <span class="dv">0</span>)</span>
+<span id="cb77-3"><a href="#cb77-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb77-4"><a href="#cb77-4" aria-hidden="true" tabindex="-1"></a><span class="fu">overview</span>(torch_predictions, df<span class="sc">$</span>y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   accuracy     error false_positive_rate false_negative_rate
+1 0.3855693 0.6144307                   1                   1</code></pre>
+</div>
+</div>
 <hr>
 </section>
 <section id="points-17" class="level6">
 <h6 class="anchored" data-anchor-id="points-17">3.6 (5 points)</h6>
 <p>Create a summary table of the <code>overview()</code> summary statistics for each of the <span class="math inline">\(4\)</span> models we have looked at in this assignment, and comment on their relative strengths and drawbacks.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb79"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb79-1"><a href="#cb79-1" aria-hidden="true" tabindex="-1"></a><span class="fu">overview</span>(predicted,expected)<span class="co">#high accuracy and low false negative rates but acceptable error and high false positive rate</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   accuracy     error false_positive_rate false_negative_rate
+1 0.8015784 0.1984216           0.6988304            0.133945</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb81"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb81-1"><a href="#cb81-1" aria-hidden="true" tabindex="-1"></a><span class="fu">overview</span>(torch_predictions, expected)<span class="co">#low accuracy and high error, false postitve, and false negative rates</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   accuracy     error false_positive_rate false_negative_rate
+1 0.3855693 0.6144307                   1                   1</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb83"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb83-1"><a href="#cb83-1" aria-hidden="true" tabindex="-1"></a><span class="fu">overview</span>(covariate_matrix,expected)<span class="co">#high accuracy good error rate and slightly high false positive and negative rates</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  accuracy     error false_positive_rate false_negative_rate
+1 1.529876 -0.529876           0.3867754           0.4280443</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb85"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb85-1"><a href="#cb85-1" aria-hidden="true" tabindex="-1"></a><span class="fu">overview</span>(step_predictions ,expected)<span class="co">#high accuracy and low false negative rates but acceptable error and high false positive rate</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   accuracy     error false_positive_rate false_negative_rate
+1 0.8049605 0.1950395           0.7076023            0.133945</code></pre>
+</div>
+</div>
 <div class="hidden" data-unless-format="pdf">
 <div style="page-break-after: always;"></div>
 </div>
-<p><br><br><br><br> <br><br><br><br></p>
-<hr>
-<div class="callout-note callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<p><br><br><br><br> <br><br><br><br> —</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
+<div class="callout-title-container flex-fill">
 Session Information
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Print your <code>R</code> session information using the following command</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sessionInfo</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb87"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb87-1"><a href="#cb87-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sessionInfo</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>R version 4.2.1 (2022-06-23)
-Platform: x86_64-apple-darwin17.0 (64-bit)
-Running under: macOS Big Sur ... 10.16
+<pre><code>R version 4.3.1 (2023-06-16 ucrt)
+Platform: x86_64-w64-mingw32/x64 (64-bit)
+Running under: Windows 11 x64 (build 22631)
 
 Matrix products: default
-BLAS:   /Library/Frameworks/R.framework/Versions/4.2/Resources/lib/libRblas.0.dylib
-LAPACK: /Library/Frameworks/R.framework/Versions/4.2/Resources/lib/libRlapack.dylib
+
 
 locale:
-[1] en_CA.UTF-8/en_CA.UTF-8/en_CA.UTF-8/C/en_CA.UTF-8/en_CA.UTF-8
+[1] LC_COLLATE=English_United States.utf8 
+[2] LC_CTYPE=English_United States.utf8   
+[3] LC_MONETARY=English_United States.utf8
+[4] LC_NUMERIC=C                          
+[5] LC_TIME=English_United States.utf8    
+
+time zone: America/New_York
+tzcode source: internal
 
 attached base packages:
 [1] stats     graphics  grDevices datasets  utils     methods   base     
 
+other attached packages:
+ [1] numDeriv_2016.8-1.1 broom_1.0.5         nnet_7.3-19        
+ [4] torch_0.12.0        caret_6.0-94        lattice_0.21-8     
+ [7] ggplot2_3.5.0       car_3.1-2           carData_3.0-5      
+[10] corrplot_0.92       stringr_1.5.1       purrr_1.0.2        
+[13] tidyr_1.3.1         readr_2.1.5         dplyr_1.1.4        
+
 loaded via a namespace (and not attached):
- [1] compiler_4.2.1  fastmap_1.1.1   cli_3.6.2       htmltools_0.5.7
- [5] tools_4.2.1     yaml_2.3.8      rmarkdown_2.25  knitr_1.45     
- [9] xfun_0.41       digest_0.6.34   jsonlite_1.8.8  rlang_1.1.3    
-[13] renv_1.0.3      evaluate_0.23  </code></pre>
+ [1] tidyselect_1.2.1     timeDate_4032.109    fastmap_1.1.1       
+ [4] pROC_1.18.5          digest_0.6.35        rpart_4.1.19        
+ [7] timechange_0.3.0     lifecycle_1.0.4      survival_3.5-5      
+[10] processx_3.8.4       magrittr_2.0.3       compiler_4.3.1      
+[13] rlang_1.1.3          tools_4.3.1          utf8_1.2.4          
+[16] yaml_2.3.8           data.table_1.15.2    knitr_1.45          
+[19] bit_4.0.5            plyr_1.8.9           abind_1.4-5         
+[22] withr_3.0.0          grid_4.3.1           stats4_4.3.1        
+[25] fansi_1.0.6          e1071_1.7-14         colorspace_2.1-0    
+[28] future_1.33.1        globals_0.16.3       scales_1.3.0        
+[31] iterators_1.0.14     MASS_7.3-60          cli_3.6.2           
+[34] rmarkdown_2.26       generics_0.1.3       rstudioapi_0.16.0   
+[37] future.apply_1.11.1  reshape2_1.4.4       tzdb_0.4.0          
+[40] proxy_0.4-27         splines_4.3.1        parallel_4.3.1      
+[43] coro_1.0.4           vctrs_0.6.5          glmnet_4.1-8        
+[46] hardhat_1.3.1        Matrix_1.5-4.1       jsonlite_1.8.8      
+[49] callr_3.7.5          hms_1.1.3            bit64_4.0.5         
+[52] listenv_0.9.1        foreach_1.5.2        gower_1.0.1         
+[55] recipes_1.0.10       glue_1.7.0           parallelly_1.37.1   
+[58] ps_1.7.6             codetools_0.2-19     shape_1.4.6.1       
+[61] lubridate_1.9.3      stringi_1.8.3        gtable_0.3.4        
+[64] munsell_0.5.0        tibble_3.2.1         pillar_1.9.0        
+[67] htmltools_0.5.7      ipred_0.9-14         lava_1.8.0          
+[70] R6_2.5.1             evaluate_0.23        backports_1.4.1     
+[73] renv_1.0.3           class_7.3-22         Rcpp_1.0.12         
+[76] nlme_3.1-162         prodlim_2023.08.28   xfun_0.42           
+[79] pkgconfig_2.0.3      ModelMetrics_1.2.2.2</code></pre>
 </div>
 </div>
 </div>
@@ -530,9 +1123,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
     }
   });
   clipboard.on('success', function(e) {
@@ -544,7 +1151,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
     button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
     setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
       button.setAttribute("title", currentTitle);
       button.classList.remove('code-copy-button-checked');
     }, 1000);
@@ -572,31 +1196,136 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   for (var i=0; i<noterefs.length; i++) {
     const ref = noterefs[i];
     tippyHover(ref, function() {
-      let href = ref.getAttribute('href');
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
     });
   }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
   var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
   for (var i=0; i<bibliorefs.length; i++) {
     const ref = bibliorefs[i];
-    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
-    tippyHover(ref, function() {
-      var popup = window.document.createElement('div');
-      cites.forEach(function(cite) {
-        var citeDiv = window.document.createElement('div');
-        citeDiv.classList.add('hanging-indent');
-        citeDiv.classList.add('csl-entry');
-        var biblioDiv = window.document.getElementById('ref-' + cite);
-        if (biblioDiv) {
-          citeDiv.innerHTML = biblioDiv.innerHTML;
-        }
-        popup.appendChild(citeDiv);
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
       });
-      return popup.innerHTML;
-    });
+    }
   }
 });
 </script>
